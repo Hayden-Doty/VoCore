@@ -3,7 +3,7 @@ body {
 }
 
 .sidebar {
-  grid-area: sidebar;
+  grid-area: sidebar; float: right;
 }
 
 .content {
