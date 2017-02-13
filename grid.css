@@ -33,7 +33,7 @@ body {
 
 
 .box {
-  background-color: #444;
+  background-color: #42f492;
   color: #fff;
   border-radius: 5px;
   padding: 50px;
@@ -42,7 +42,7 @@ body {
 
 .header,
 .footer {
-  background-color: #999;
+  background-color: #42f492;
 }
 
 .topleft {
