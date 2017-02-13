@@ -3,12 +3,12 @@ body {
 }
 
 .sidebar {
-  grid-area: sidebar; float: right;
+  grid-area: sidebar; 
 }
 
 .content {
   grid-area: content;
-  position: relative; float: left;
+  position: relative; 
 }
 
 .header {
