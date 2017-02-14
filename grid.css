@@ -11,7 +11,18 @@ body {
   grid-area: content;
   position: relative; 
 }
-
+.content1 {
+  grid-area: content;
+  position: relative; 
+}
+.content2 {
+  grid-area: content;
+  position: relative; 
+}
+.content3 {
+  grid-area: content;
+  position: relative; 
+}
 .header {
   grid-area: header;
 }
@@ -27,6 +38,9 @@ body {
         grid-template-areas:
     "header  header  header"
         "sidebar content content"
+        "sidebar content1 content1"
+        "sidebar content2 content2"
+        "sidebar content3 content3"
         "footer  footer  footer";
         background-color: #fff;
         color: #444;
