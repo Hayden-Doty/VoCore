@@ -4,24 +4,28 @@ body {
 
 .sidebar {
   grid-area: sidebar;
-  background-color: #fff;
+  background-color: #93b5ed;
 }
 
 .content {
   grid-area: content;
-  position: relative; 
+  position: relative;
+  background-color: #160084;
 }
 .content1 {
   grid-area: content;
-  position: relative; 
+  position: relative;
+  background-color: #160084;
 }
 .content2 {
   grid-area: content;
-  position: relative; 
+  position: relative;
+  background-color: #160084;
 }
 .content3 {
   grid-area: content;
-  position: relative; 
+  position: relative;
+  background-color: #160084;
 }
 .header {
   grid-area: header;
@@ -48,7 +52,7 @@ body {
 
 
 .box {
-  background-color: #95e1f4;
+  
   color: #fff;
   border-radius: 5px;
   padding: 50px;
