@@ -1,0 +1,33 @@
+<html>
+<head>
+<link href="grid.css" rel="stylesheet" type="text/css">
+<title> VoCore</title>
+</head>
+<body>
+ <div class="box header"><h1>VoCore</h1></div>
+ <img src="http://vocore.io/img/v1/v1.head.jpg">
+ </div>
+ <ul>
+ <li> <a href="https://urza-kan.github.io/VoCore/howtovocore.html"> setup</a></li>
+ </ul>
+ <div class="box sidebar"><u>About</u>
+ <table class="table table-bordered table-striped">
+    <thead><tr><th></th><th>Details</th></tr></thead>
+    <tbody>
+     <tr><th class="text-nowrap" scope="row">SIZE</th><td>25.6mm x 25.6mm x 3.0mm</td></tr>
+     <tr><th class="text-nowrap" scope="row">CPU</th><td>RT5350, 360 MHz, MIPS 24K</td></tr>
+     <tr><th class="text-nowrap" scope="row">MEMORY</th><td>32MB, SDRAM</td></tr>
+     <tr><th class="text-nowrap" scope="row">STORAGE</th><td>16M NOR on board</td></tr>
+     <tr><th class="text-nowrap" scope="row">WIRELESS</th><td>802.11n, 1T1R, speed up to 75Mbps.</td></tr>
+     <tr><th class="text-nowrap" scope="row">ANTENNA</th><td>one on board antenna.</td></tr>
+     <tr><th class="text-nowrap" scope="row">ETHERNET</th><td>5 ports, up to 100Mbps.</td></tr>
+     <tr><th class="text-nowrap" scope="row">USB</th><td>Support USB 2.0, up to 480MHz.</td></tr>
+     <tr><th class="text-nowrap" scope="row">GPIO</th><td>&gt;=30 (pinmux)</td></tr>
+     <tr><th class="text-nowrap" scope="row">UART</th><td>x2 (UART1 for debug console)</td></tr>
+     <tr><th class="text-nowrap" scope="row">POWER SUPPLY</th><td>3.6V ~ 6.0V</td></tr>
+     <tr><th class="text-nowrap" scope="row">POWER CONSUMPTION</th><td>~130mA~190mA, 5V input.</td></tr>
+    </tbody>
+   </table>
+   </div>
+</body>
+</html>
