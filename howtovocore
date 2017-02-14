@@ -1,0 +1,75 @@
+<html>
+<head>
+<link href="grid.css" rel="stylesheet" type="text/css">
+<title> VoCore </title>
+</head>
+<div class="wrapper">
+  <div class="box header"><h1>VoCore</h1></div>
+  <div class="box sidebar">
+   <h4><u>Setup AP + STA Mode</u></h4>
+   <p>1. connect to your VoCore.</p>
+   <p>2. run command in console:</p>
+   <p>uci set wireless.sta.ssid=[AP SSID]</p>
+   <p>uci set wireless.sta.key=[AP PASSWORD]</p>
+   <p>uci set wireless.sta.network=wwan</p>
+   <p>uci set wireless.sta.disabled=0</p>
+   <p>uci commit</p>
+   <p>/etc/init.d/network restart</p>
+   <p>3. wait around 10 seconds, your VoCore is in AP+STA mode</p>
+   <p><b>note</b>: you might need to setup network to enable dhcp(get ip from your hotspot).</p>
+   <p>uci delete network.wwan</p>
+   <p>uci set network.wwan=interface</p>
+   <p>uci set network.wwan.proto=dhcp</p>
+   <p>uci commit</p>
+   <p><b>note</b>: you might need to setup firewall to enable access to internet through your hotspot.</p>
+   <p>uci del_list firewall.@zone[1].network=wwan</p>
+   <p>uci add_list firewall.@zone[1].network=wwan</p>
+   <p>uci set firewall.@zone[1].input=ACCEPT</p>
+   <p>uci set firewall.@zone[1].output=ACCEPT</p>
+   <p>uci set firewall.@zone[1].forward=ACCEPT</p>
+   <p>uci set firewall.@zone[1].masq=1</p>
+   <p>uci set firewall.@zone[1].mtu_fix=1</p>
+   <p>uci commit</p>
+ </div>
+ <div class="box content"> 
+ <h4><u>Develop for VoCore</u></h4>
+   <p>1. Download and install VirtualBox(it supports Ubuntu/Windows/MacOS)</p>
+   <p>2. Download Ubuntu, install on your VirtualBox.</p>
+   <p>3. In virtualbox, we will need install some packages to compile openwrt:</p>
+   <p>sudo apt-get install gcc g++ binutils patch bzip2 flex bison make autoconf gettext texinfo unzip sharutils subversion libncurses5-dev ncurses-term zlib1g-dev</p>
+   <p>4. Download openwrt.</p>
+   <p>git clone -b chaos_calmer git://github.com/openwrt/openwrt.git</p>
+   <p>5. configure openwrt in menu, choose VoCore in menu.</p>
+   <p>make menuconfig</p>
+   <p>6. call "make", start the make process</p>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/NZnWPbmbb6c" frameborder="0" allowfullscreen></iframe>
+   </div>
+  <div class="box content"> 
+  <h4><u>Upload Firmware</u></h4>
+   <p>1. upload firmware through luci, please read manual in Download section.</p>
+   <p>2. upload firmware through console, connected to VoCore hotspot.</p>
+   <p>(1) copy from pc to VoCore[operate in PC]: scp [your firmware].bin root@192.168.61.1:/tmp/vocore.bin</p>
+   <p>here is two choices, 2.a will erase all data/config you write to VoCore, 2.b just upgrade the firmware but keep them.</p>
+   <p>(2.a) write to VoCore nor flash[operate in VoCore]: mtd -e firmware write /tmp/vocore.bin firmware</p>
+   <p>(2.b) system upgrade VoCore nor flash[operate in VoCore]: sysupgrade /tmp/vocore.bin firmware</p>
+   <p>(3) wait until mtd done, reboot your VoCore.</p>
+   <p><b>note</b>: if you want set your VoCore back to first time boot up, call "firstboot" in console.</p>
+  </div>
+  <div class="box content">
+  <h4>Fix Bricked VoCore</h4>
+   <p>1. connect your VoCore to computer through TTL, please read manual for detail.</p>
+   <p>2. open tty tools(must have kermit protocol), such as kermit, ckermit. </p>
+   <p>3. power up your VoCore, once you find: "Press 'x' to active console", press 'x', into uboot console.</p>
+   <p>4. call 'loadb', then send the bin file through TTL by kermit.</p>
+   <p><b>note</b>: after 'loadb', press Ctrl and '\' same time then press 'c', you will switch to kermit command console.</p>
+   <p>5. send upgrade firmware to VoCore, after that, back to VoCore uboot console.</p>
+   <p><b>note</b>: call "send path/to/your/upgrade/file/on/pc.bin" to send firmware, around 10 minutes, once it finished, call 'c' back to console.</p>
+   <p>6. erase current firmware on VoCore.</p>
+   <p><b>note</b>: call "erase linux", wait 15~20 seconds to finish.</p>
+   <p>7. copy firmware to flash.</p>
+   <p><b>note</b>:call "cp.linux [hex size]", hex size is your firmware size in hex format, for example if its size is 3,145,732 bytes it should be 'cp.linux 300004'.</p>
+   <p><b>note</b>: call 'cp.linux' might report error for wrong file size, please call "tftpboot" then Ctrl + C immediately, after that do "cp.linux [hex size]" again(tftpboot clear the wrong file size).</p>
+   <p>8. around 10~12 seconds, firmware uploaded, call "reset" to reboot your VoCore, your VoCore will work again.</p>
+  </div>
+ </body>
+ </html>
