@@ -79,9 +79,10 @@ table {
     display: table;
     border-collapse: separate;
     border-spacing: 2px;
-    border-color: grey;
+    border-color: #c7d5ed;
 }
 body {
     padding-bottom: 10px;
     color: #5a5a5a;
 }
+table { background-color: #c9c5e0;}
