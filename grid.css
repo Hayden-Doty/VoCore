@@ -13,17 +13,17 @@ body {
   background-color: #160084;
 }
 .content1 {
-  grid-area: content;
+  grid-area: content1;
   position: relative;
   background-color: #160084;
 }
 .content2 {
-  grid-area: content;
+  grid-area: content2;
   position: relative;
   background-color: #160084;
 }
 .content3 {
-  grid-area: content;
+  grid-area: content3;
   position: relative;
   background-color: #160084;
 }
