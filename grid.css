@@ -16,7 +16,7 @@ a:hover, a:active {
 }
 .sidebar {
   grid-area: sidebar;
-  background-color: #93b5ed;
+  background-color: #9478e8;
 }
 
 .content {
