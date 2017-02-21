@@ -79,7 +79,6 @@ table-bordered {
     border: 1px solid #ddd;
 }
 .table {
-    width: 100%;
     max-width: 100%;
     margin-bottom: 20px;
 }
@@ -91,7 +90,7 @@ table {
     display: table;
     border-collapse: separate;
     border-spacing: 2px;
-    border-color: #c7d5ed;
+    border-color: #5d08d3;
 }
 body {
     padding-bottom: 10px;
