@@ -80,11 +80,12 @@ table-bordered {
 }
 .table {
     max-width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 table {
     border-spacing: 0;
     border-collapse: collapse;
+    text-align: left;
 }
 table {
     display: table;
