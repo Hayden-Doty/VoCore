@@ -82,23 +82,24 @@ table-bordered {
 .table {
     max-width: 100%;
     margin-bottom: 10px;
+  float: right;
 }
-table {
+.table {
     border-spacing: 0;
     border-collapse: collapse;
     text-align: left;
 }
-table {
+.table {
     display: table;
     border-collapse: separate;
     border-spacing: 2px;
     border-color: #5d08d3;
 }
-body {
+.body {
     padding-bottom: 10px;
     color: #5a5a5a;
 }
-table { background-color: #c9c5e0;}
+.table { background-color: #c9c5e0;}
 body {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;}
 .vocore1table {text-align: left}
