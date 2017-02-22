@@ -1,7 +1,8 @@
 body {
   margin: 40px;
 }
-h1 { text-align: center; font-size: 5em; font-family: Verdana, Helvetica, Arial, sans-serif; color: white }
+
+h1 { text-align: center; font-size: 5em; font-family: Verdana, Helvetica, Arial, sans-serif; color: white; background-color: #9478e8; }
 a:link, a:visited {
     background-color: #9478e8;
     color: white;
@@ -73,7 +74,7 @@ a:hover, a:active {
   font-size: 150%;
 }
 
-.footer {
+.header, .footer {
   background-color: #42f492;
 }
 table-bordered {
@@ -102,4 +103,3 @@ table-bordered {
 body {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;}
 .vocore1table {text-align: left}
-.header { background-color: #9478e8;}
