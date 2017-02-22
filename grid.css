@@ -9,7 +9,7 @@ a:link, a:visited {
     text-decoration: none;
     display: inline-block;
 }
-.qwerty{ width:33%; }
+.qwerty{ width:25%;}
 
 a:hover, a:active {
     background-color: red;
