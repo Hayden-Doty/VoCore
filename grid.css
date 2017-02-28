@@ -58,7 +58,7 @@ a:hover, a:active {
 .content {
   grid-area: content;
   position: relative;
-  background-color: #160084;
+  background-color: #160084; float: right;;
 }
 .content1 {
   grid-area: content1;
