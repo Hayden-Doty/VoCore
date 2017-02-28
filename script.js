@@ -1,3 +1,4 @@
+<script>
 -var photoCount = 6;
 -var pieceCount = 6;
 -var onPhoto = 0;
@@ -94,3 +95,4 @@
 -		delay = setInterval(nextSlide, 1000);
 -	}
 -}
+</script>
